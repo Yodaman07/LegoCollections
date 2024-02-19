@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D308F143297E558600DB12F7 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D308F142297E558600DB12F7 /* SheetView.swift */; };
+		D36272E32B83BF2000CF477E /* AddStorageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36272E22B83BF2000CF477E /* AddStorageItem.swift */; };
 		D3B058442979C079004BEBA8 /* CollectionAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B058432979C079004BEBA8 /* CollectionAppApp.swift */; };
 		D3B058462979C079004BEBA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B058452979C079004BEBA8 /* ContentView.swift */; };
 		D3B058482979C07B004BEBA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3B058472979C07B004BEBA8 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		D308F142297E558600DB12F7 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
+		D36272E22B83BF2000CF477E /* AddStorageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStorageItem.swift; sourceTree = "<group>"; };
 		D3B058402979C079004BEBA8 /* CollectionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B058432979C079004BEBA8 /* CollectionAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAppApp.swift; sourceTree = "<group>"; };
 		D3B058452979C079004BEBA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		D3B058372979C079004BEBA8 = {
 			isa = PBXGroup;
 			children = (
+				D36272E22B83BF2000CF477E /* AddStorageItem.swift */,
 				D3B058422979C079004BEBA8 /* CollectionApp */,
 				D3B058542979C07B004BEBA8 /* CollectionAppTests */,
 				D3B0585E2979C07B004BEBA8 /* CollectionAppUITests */,
@@ -103,8 +106,8 @@
 				D3B058452979C079004BEBA8 /* ContentView.swift */,
 				D3B0586E2979C283004BEBA8 /* CollectionView.swift */,
 				D308F142297E558600DB12F7 /* SheetView.swift */,
-				D3B058472979C07B004BEBA8 /* Assets.xcassets */,
 				D3B058492979C07B004BEBA8 /* CollectionApp.entitlements */,
+				D3B058472979C07B004BEBA8 /* Assets.xcassets */,
 				D3B0584A2979C07B004BEBA8 /* Preview Content */,
 			);
 			path = CollectionApp;
@@ -268,6 +271,7 @@
 				D3B0586F2979C283004BEBA8 /* CollectionView.swift in Sources */,
 				D3B058462979C079004BEBA8 /* ContentView.swift in Sources */,
 				D308F143297E558600DB12F7 /* SheetView.swift in Sources */,
+				D36272E32B83BF2000CF477E /* AddStorageItem.swift in Sources */,
 				D3B058442979C079004BEBA8 /* CollectionAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

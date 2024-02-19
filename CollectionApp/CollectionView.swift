@@ -30,10 +30,7 @@ struct CollectionView: View {
                             active = true
                         }.font(.largeTitle).sheet(isPresented: $active) {
                             SheetView(active: $active, itemData: $AllData)
-                        }
-                        
-
-                        
+                        } //Bindings are just pointers in swift
                     }.padding()
                     
                 
