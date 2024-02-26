@@ -81,7 +81,6 @@
 		D3B058372979C079004BEBA8 = {
 			isa = PBXGroup;
 			children = (
-				D36272E22B83BF2000CF477E /* AddStorageItem.swift */,
 				D3B058422979C079004BEBA8 /* CollectionApp */,
 				D3B058542979C07B004BEBA8 /* CollectionAppTests */,
 				D3B0585E2979C07B004BEBA8 /* CollectionAppUITests */,
@@ -102,6 +101,7 @@
 		D3B058422979C079004BEBA8 /* CollectionApp */ = {
 			isa = PBXGroup;
 			children = (
+				D36272E22B83BF2000CF477E /* AddStorageItem.swift */,
 				D3B058432979C079004BEBA8 /* CollectionAppApp.swift */,
 				D3B058452979C079004BEBA8 /* ContentView.swift */,
 				D3B0586E2979C283004BEBA8 /* CollectionView.swift */,

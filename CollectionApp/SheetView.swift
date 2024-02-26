@@ -11,7 +11,7 @@ import PhotosUI
 struct SheetView: View {
     let options = ["Bookshelf","Set"]
     @Binding var active: Bool
-    @Binding var itemData: [Item]
+    @Binding var storageData: [StorageItem]
     
     @State var canCreate = true
     
@@ -30,7 +30,7 @@ struct SheetView: View {
                 }
             }.pickerStyle(.segmented)
             if (selected == "Bookshelf"){
-                AddStorageItem(itemData: $itemData, sheetActive: $active, canCreate: $canCreate)
+                AddStorageItem(storageData: $storageData, sheetActive: $active, canCreate: $canCreate)
             }
             
             if (!canCreate){
@@ -43,6 +43,12 @@ struct SheetView: View {
 struct SheetView_Previews: PreviewProvider {
     static var previews: some View {
         SheetView(active: .constant(true),
-                  itemData: .constant([Item(name: "Test", img: "books.vertical.fill", inBookshelf: 0)]))
+                  storageData: .constant(
+                    [
+                        StorageItem(name: "Glass Bookshelf", levels: 4, active: false, sets: [
+                            LegoSet(name: "NinjagoSet", setNum: 1234, img: "octogon.fill", level: 2),
+                            LegoSet(name: "CoolSet", setNum: 5678, img: "octogon.fill", level: 4)])
+                     ]
+                  ))
     }
 }

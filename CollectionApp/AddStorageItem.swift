@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddStorageItem: View {
-    @Binding var itemData : [Item]
+    @Binding var storageData : [StorageItem]
     @Binding var sheetActive : Bool
     @Binding var canCreate : Bool
     
@@ -37,7 +37,7 @@ struct AddStorageItem: View {
             
             Button("Create"){
                 if (Int(shelfCount) != nil || shelfCount == ""){
-                    itemData.append(Item(name: bookshelf, img: "books.vertical.fill", inBookshelf: Int(shelfCount)))
+                    storageData.append(StorageItem(name: bookshelf, levels: Int(shelfCount)!, active: false, sets: [] ))
                     sheetActive = false
                 }else{
                     canCreate = false
@@ -50,5 +50,5 @@ struct AddStorageItem: View {
 }
 
 #Preview {
-    AddStorageItem(itemData: .constant([Item(name: "Test", img: "books.vertical.fill", inBookshelf: 0)]), sheetActive: .constant(true), canCreate: .constant(true))
+    AddStorageItem(storageData: .constant([StorageItem(name: "Test", levels: 0, active: false, sets: [] )]), sheetActive: .constant(true), canCreate: .constant(true))
 }
