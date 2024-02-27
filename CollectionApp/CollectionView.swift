@@ -12,15 +12,6 @@ struct CollectionView: View {
     @State var imageName:String = "chevron.up"
     @State var active = false
     
-    
-    @State var AllData: [Item] = [
-        Item(name: "Bookshelf1", img: "books.vertical.fill", inBookshelf: 6, children: [Item(name: "LegoSet1", img: "octagon.fill", shelf: 5),
-        Item(name: "LegoSet2", img: "octagon.fill", shelf: 4)]),
-        
-        Item(name: "Bookshelf2", img: "books.vertical.fill", inBookshelf: 5, children: [Item(name: "OtherSet1", img: "octagon.fill", shelf: 4),
-        Item(name: "OtherSet2", img: "octagon.fill", shelf: 3)])
-    ]
-    
     @State var Data: [StorageItem] = [
         StorageItem(name: "Glass Bookshelf", levels: 4, active: false, sets: [
             LegoSet(name: "NinjagoSet", setNum: 1234, img: "octogon.fill", level: 2),
@@ -74,9 +65,12 @@ struct CollectionView: View {
                             }, label: {
                                 Image(systemName: storageData.active ? "chevron.down" : "chevron.up")
                                     .imageScale(.large)
-                                    .foregroundStyle(.blue)
+                                    .foregroundStyle(storageData.sets.isEmpty ? .red : .blue)
                                     .bold()
+                                
                             })
+                            .animation(.snappy(duration: 0.1), value: storageData.active)
+                            //Animation help https://www.hackingwithswift.com/quick-start/swiftui/customizing-button-with-buttonstyle
 
                         }
                         if (storageData.active){
@@ -107,17 +101,6 @@ struct CollectionView: View {
     }
 }
 
-
-
-
-struct Item: Identifiable{
-    var id = UUID()
-    var name: String
-    var img: String
-    var inBookshelf: Int?
-    var shelf: Int?
-    var children: [Item]?
-}
 
 
 struct StorageItem: Identifiable{ //I.E. Bookshelfs/Tables
